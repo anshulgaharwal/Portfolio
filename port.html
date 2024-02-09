@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <style type="text/css">
+        * {
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main {
+            height: calc(100vh - 100px);
+            display: flex;
+            overflow: auto;
+            box-sizing: border-box;
+            padding: 10px;
+            /* gap: 800px;   */
+            background-color: rgb(210, 210, 241);
+        }
+
+        .div1 {
+            width: 20%;
+            /* background-color: aqua; */
+            height: 82vh;
+            display: grid;
+
+        }
+
+        .div2 {
+            width: 50%;
+            /* background-color: rgb(255, 140, 0); */
+            height: 82vh;
+            align-items: center;
+            display: inline;
+        }
+
+        .div3 {
+            width: 30%;
+            /* background-color: rgb(3, 7, 9); */
+            height: 82vh;
+        }
+
+        .nav2 {}
+
+        .inter-nav {
+
+            font-family: calibri;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 15px;
+            margin: 10px;
+            height: 65px;
+            border-radius: 5px;
+            background-image: url(wall2.jpg);
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 720px;
+
+        }
+
+        .navbar {
+
+            font-family: calibri;
+            /* padding-right: 15px;padding-left: 15px; padding-top: 15px; */
+            /* margin: 10px; */
+            height: 65px;
+            border-radius: 5px;
+            background-color: rgb(210, 210, 241);
+
+            /* background-image: url(wall2.jpg); */
+            /* background-color: rgb(255, 0, 64); */
+
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            display: flex;
+            
+            margin-left: 55px;
+        }
+
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            /* background-color: rgb(255, 0, 64); */
+
+        }
+        .img {
+
+        }
+        .nshul p{
+            margin-top: 10px;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+        }
+
+        li a {
+            /* color: rgb(255, 255, 255);  */
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+
+
+        }
+
+        button {
+            background-color: rgb(255, 255, 255);
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+
+        .button1 {
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /* background-image: url(wall2.jpg); */
+            border-radius: 25px;
+            height: 40px;
+            margin: 10px;
+            background-color: rgb(255, 0, 64);
+            font-family: calibri;
+            width: 80px;
+            
+
+        }
+
+        .button2 {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /* background-image: url(wall2.jpg); */
+            border-radius: 25px;
+            height: 40px;
+            margin: 10px;
+            background-color: rgb(255, 0, 64);
+            font-family: calibri;
+            width: 80px;
+
+
+
+
+        }
+
+        .button3 {
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /* background-image: url(wall2.jpg); */
+            border-radius: 25px;
+            height: 40px;
+            margin: 10px;
+            background-color: rgb(255, 0, 64);
+            font-family: calibri;
+            width: 80px;
+
+
+
+        }
+
+        .button4 {
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /* background-image: url(wall2.jpg); */
+            border-radius: 25px;
+            height: 40px;
+            margin: 10px;
+            background-color: rgb(255, 0, 64);
+            font-family: calibri;
+            width: 80px;
+
+
+
+        }
+
+        .button1 p {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            font-weight: 500;
+
+        }
+
+        .button2 p {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .button3 p {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .button4 p {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .navb1 {
+            background-color: rgb(255, 0, 64);
+            /* color: white; */
+
+        }
+
+        .navb2 {
+            /* background-color: rgb(255, 0, 64); */
+            /* color: white; */
+        }
+
+        .navb2 a {
+            font-size: 35px;
+            font-weight: 600;
+            color: rgb(68, 43, 43);
+            /* background-color: rgb(255, 0, 64); */
+            margin-right: 20px;
+
+        }
+
+        .centre {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            /* margin-top: 250px; */
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            height: 130px;
+            display: flex;
+        }
+
+        footer p {
+            font-size: 30px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .footer-left {
+            width: 30%;
+            margin-top: 10px;
+            margin-left: 30px;
+            /* background-color: blueviolet; */
+        }
+
+        .footer-right {
+            width: 30%;
+            margin-top: 10px;
+            /* background-color: blue; */
+        }
+
+        .footer-middle {
+            width: 40%;
+            margin-top: 10px;
+            /* background-color: aqua; */
+        }
+
+        .reference {
+            display: flex;
+        }
+
+        .Projects a {
+            color: white;
+        }
+
+        .Gallery a {
+            color: white;
+        }
+
+        .Articles a {
+            color: white;
+        }
+
+        .fm1 {
+            display: flex;
+        }
+
+        .fm2 {
+            display: flex;
+        }
+
+        .social-media {
+            display: flex;
+        }
+
+        .hii p {
+            font-size: 45px;
+            font-weight: 500;
+        }
+
+        .name {
+            display: flex;
+        }
+
+        .am p {
+            font-size: 45px;
+            font-weight: 500;
+        }
+
+        .Anshul p {
+            font-size: 45px;
+            font-weight: 500;
+            color: red;
+        }
+
+        .student p {
+            font-size: 25px;
+            padding-bottom: 60px;
+        }
+
+        
+
+        .bubu {
+            background-color: red;
+            /* color: white; */
+        }
+
+        .bubu a {
+            color: rgb(0, 0, 0);
+        }
+
+        .logologo {
+            margin-top: 20px;
+        }
+
+        .intro{
+            margin-left: 30px;
+        }
+        .about-me {
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /* background-image: url(wall2.jpg); */
+            border-radius: 25px;
+            height: 30px;
+            margin: 8px;
+            background-color: rgb(255, 0, 64);
+            font-family: calibri;
+            width: 150px;
+
+
+
+        }
+        .aboutme p {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            font-weight: 500;
+        }
+        /* html, body {
+  height: 100%; } */
+
+/* body {
+  display: grid;
+  font-family: Avenir, sans-serif;
+  color: #111; } */
+  .butu {
+  position: relative;
+  margin: auto;
+ /* margin-top: 100px; */
+  padding: 19px 22px;
+  transition: all .2s ease; }
+  .butu:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgb(0, 0, 0);
+    width: 56px;
+    height: 56px;
+    transition: all .3s ease; }
+  .butu span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: white;
+ }
+  .butu svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease; }
+  .butu:hover:before {
+    width: 100%;
+    background: rgb(0, 0, 0); }
+  .butu:hover svg {
+    transform: translateX(0); }
+  .butu:active {
+    transform: scale(0.96); }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all .2s ease; }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgb(255, 72, 118);
+    width: 56px;
+    height: 56px;
+    transition: all .3s ease; }
+  .cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    vertical-align: middle; }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease; }
+  .cta:hover:before {
+    width: 100%;
+    background: rgb(255, 0, 64); }
+  .cta:hover svg {
+    transform: translateX(0); }
+  .cta:active {
+    transform: scale(0.96); }
+
+        /* .button:hover{
+            cast-shadow: 10px 10px black;
+
+        } */
+        .myproject{
+            height: 280px;
+            width: 300px;
+            background-color: rgb(255, 72, 118);
+            margin-top: 30px;
+            border-radius: 30px;
+            padding-top: 7px;
+            /* padding-bottom: 10px; */
+        }
+        .myproject p{
+            font-size: 22px;
+            font-weight: 900;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 20px;
+            color: rgb(0, 0, 0);
+            /* margin-top: 15px; */
+        }
+        .line{
+        width: 250px;
+        height: 10px;
+        border-bottom: 3px solid black;
+        position: absolute;
+        margin-left: 25px;
+        /* padding-bottom: 10px; */
+        }
+        .link-sign-up{
+            margin-top: 65px;
+            margin-left: 80px;
+        }
+        .link-sign-up1{
+            margin-top: 65px;
+            margin-left: 70px;
+        }
+        
+    </style>
+</head>
+<!-- <body background="wall5.jpg"> -->
+<div class="nav">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><div class="img"><a href="#"><img src="A.png" alt="" height="65px" width="65px"></div><div class="nshul"><p>nshul</p></div></a>
+            </div>
+            
+            <ul>
+
+                <!-- <button class="navb1"><a href="port.html"><strong><p>Home</p></strong></a></button> -->
+
+                <!-- <div class="navb2"><a href="signup.html">Sign Up</a> -->
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<div class="main">
+
+    <div class="div1">
+        <!-- <a href="profile.html" class="button">
+        <div class="button1">
+            
+                <p><strong>Profile</strong></p>
+           
+        </div>
+    </a>
+        &nbsp;
+        <a href="project.html" class="button">
+        <div class="button2">
+            
+                <p><strong>Projects</strong></p>
+          
+        </div>
+    </a>
+        &nbsp;
+        <a href="gallery.html" class="button">
+        <div class="button3">
+            
+                <p><strong>Gallery</strong></p>
+           
+        </div>
+    </a>
+        &nbsp;
+        <a href="https://www.newscientist.com/subject/technology/" class="button">
+        <div class="button4">
+            
+                <p><strong>Articles</strong></p>
+           
+        </div>
+    </a> -->
+    <a href="profile.html" class="cta">
+        <span>Profile</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </a>
+      <a href="project.html" class="cta">
+        <span>Projects</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </a>
+      <a href="gallery.html" class="cta">
+        <span>Gallery</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </a>
+    </div>
+
+    <div class="div2">
+        <div class="video">
+            <!-- <video width="500px" height="500px" controls>
+                <source src="def.gif" type="img/gif" />
+               </video> -->
+               <img src="def.gif" height="" width="">
+        </div>
+        <!-- <div class="passport">
+            <img src="passport.png" alt="wait a sec please...." class="centre">
+        </div> -->
+        <!-- <div class="nav2"> -->
+            <!-- <nav class="inter-nav">
+                
+                    <ul>
+                        <button><a href="port.html"><strong>Profile</strong></a></button>
+                        <button><a href="signup.html"><strong>Experience</strong></a></button>                        <button><a href="signup.html"><strong>Experience</strong></a></button>
+                        <button><a href="signup.html"><strong>Projects</strong></a></button>
+                        <button><a href="signup.html"><strong>Personal Life</strong></a></button>
+
+                    </ul>
+        
+            </nav> -->
+        <!-- </div> -->
+    </div>
+
+    <div class="div3">
+        <div class="intro">
+            <div class="hii">
+                <p>Hii...</p>
+            </div>
+            <div class="name">
+                <div class="am">
+                    <p>I am, </p>
+                </div>
+                &nbsp;
+                <div class="Anshul">
+                    <p>Anshul...</p>
+                </div>
+            </div>
+            <div class="student">
+                <p><strong>Student of IIT Indore</strong></p>
+            </div>
+            &nbsp;
+            <a href="aboutme.html" class="cta">
+                <span>about me</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
+            <!-- <div class="about-me">
+                <a href="aboutme.html" class="aboutme">
+                    <p><strong>About me</strong></p>
+                </a>
+            </div> -->
+        </div>
+            <!-- <div class="iit-logo">
+                <img src="iit.png" alt="" class="logologo">
+            </div> -->
+            <div class="myproject">
+                <div class="heading-my-project">
+                    <p>Links for my projects</p>
+                </div>
+                <div class="line">
+
+                </div>
+                <div class="link-sign-up">
+                    <a href="signin.html" class="butu">
+                        <span>Sign Up</span>
+                        <svg width="13px" height="10px" viewBox="0 0 13 10">
+                          <path d="M1,5 L11,5"></path>
+                          <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                      </a>
+                </div>
+                <div class="link-sign-up1">
+                    <a href="port.html" class="butu">
+                        <span>Portfolio</span>
+                        <svg width="13px" height="10px" viewBox="0 0 13 10">
+                          <path d="M1,5 L11,5"></path>
+                          <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                      </a>
+                </div>
+            </div>
+       </div>
+       
+
+    </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <p>Personal Portfolio</p>
+
+            <div class="reference">
+                <div class="Projects"><a href="project.html">Projects</a>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="Gallery"><a href="gallery.html">Gallery</a>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="Articles"><a href="#">Articles</a>
+                </div>
+
+
+                <!-- <p><a href="mailto:hege@example.com">hege@example.com</a></p> -->
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="contact-us">
+                <p>Contact me</p>
+            </div>
+            <div class="fm1">
+                <div class="call-img">
+                    <img src="call.png" alt="" height="30px" width="30px">
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="contact-number">
+                    <p>9329318380</p>
+                </div>
+            </div>
+            <div class="fm2">
+                <div class="mail-img">
+                    <img src="mail.png" alt="" height="30px" width="30px">
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="mymail">
+                    <p>me230003007@iiti.ac.in</p>
+                </div>
+            </div>
+            <div class="fm3">
+
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="future">
+                <p>Too good to be true</p>
+            </div>
+            <div class="social-media">
+                <div class="insta">
+                    <a href="https://www.instagram.com/anshulgaharwal/"><img src="instagram.png" alt="" height="30px"
+                            width="30px"></a>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="link">
+                    <a href="https://www.linkedin.com/in/anshul-gaharwal-73ba62288/"><img src="linkedin.png" alt=""
+                            height="30px" width="30px"></a>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="tweet">
+                    <a href="https://twitter.com/?lang=en"><img src="twitter.png" alt="" height="30px" width="30px"></a>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="git">
+                    <a href="https://github.com/anshulgaharwal"><img src="github.png" alt="" height="30px"
+                            width="30px"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    </body>
+
+</html>
